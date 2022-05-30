@@ -7,23 +7,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - run: pip3 install numpy
-      - run: python3 array01.py
-
-      # Checkout the repository
-      - name: Checkout the repository
-        uses: actions/checkout@v2
-
-        with:
-          repository: codeschooluz/numpy_test
-          token: ${{secrets.TEST_KEY}}
-          path: test
-      - name: Install dependencies
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.9"
-      - name: Install pytest
-        run: |
-          pip install pytest
-      - name: Run tests
-        run: |
-          pytest -v --tb=no -q
+      - run: pip3 install pytest
+      - run: pytest
