@@ -6,3 +6,6 @@ def main(array):
     """
     
     return np.array(array)
+
+print(np.array([1, 2, 3]))
+print(main([1, 2, 3]))
