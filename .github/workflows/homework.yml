@@ -6,7 +6,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: pip install numpy
+      - run: pip3 install numpy
+      - run: python3 array01.py
 
       # Checkout the repository
       - name: Checkout the repository
